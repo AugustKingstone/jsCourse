@@ -72,3 +72,30 @@ Project.delete = (id) => {
 };
 
 export default Project;
+
+
+
+
+/**
+Ce code définit une classe Project et les méthodes pour gérer les projets dans une "base de données" en mémoire, sans stockage externe.
+
+### Fonctionnement de la classe Project
+
+- La classe Project représente un projet avec ses propriétés : id, titre, description, statut, dates de création et modification.
+- La méthode update permet de changer les attributs (sauf id, createdAt) et met à jour la date de modification.
+- La méthode toJSON formate et retourne les informations du projet en objet simple, pratique pour l’API.
+
+### Simulations et opérations CRUD
+
+- Les projets sont stockés dans un tableau projects, et nextId génère les identifiants automatiquement.
+- Les méthodes statiques (getAll, getById, create, update, delete) simulent les actions principales d’une base de données classique :
+    - getAll : retourne la liste des projets.
+    - getById : sélectionne un projet selon son id.
+    - create : ajoute un nouveau projet.
+    - update : modifie un projet existant.
+    - delete : supprime un projet spécifié.
+
+### Utilisation
+
+Ce modèle permet la gestion complète des projets dans une API Node.js, utile pour développer et tester des fonctionnalités sans accès à une vraie base de données.
+ */
